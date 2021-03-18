@@ -9,6 +9,12 @@ def exit_on_q(key):
 
 def see():
 
+    palette = [
+        ('banner', 'white', '#ff6f69'),
+        ('streak', 'white', 'light red'),
+        ('bg', 'white', '#ff6f69'),
+    ]
+
     try:
         conn = connect(
                 host="localhost",
@@ -19,13 +25,13 @@ def see():
         query = "SELECT * FROM micro_diary"
         cur.execute(query,)
         records = cur.fetchall()
-        records = str(records)
         for row in records:
-            txt = urwid.Text(('banner', '%s' % (row[0])), align='center')
+            txt = urwid.Text(('banner', '%s\n\n%s' % (row[1], row[2])), align='center')
             fill = urwid.Filler(txt)
-            loop = urwid.MainLoop(fill, unhandled_input=exit_on_q)
+            loop = urwid.MainLoop(fill, palette, unhandled_input=exit_on_q)
+            loop.screen.set_terminal_properties(colors=256)
+            loop.widget = urwid.AttrMap(fill, 'bg')
             loop.run()
-
     except Error as e:
         print("Error while connecting to db", e)
     finally:

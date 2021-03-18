@@ -14,9 +14,17 @@ class Tags(urwid.Filler):
         self.original_widget = urwid.Text(texto, align='center')
 
 
-edit = urwid.Edit(u"Tags:\n", align='center')
+palette = [
+    ('banner', 'white', '#ff6f69'),
+    ('streak', '', ''),
+    ('bg', 'white', '#ff6f69'),
+]
+
+edit = urwid.Edit(u"Tags:\n\n", align='center')
 fill = Tags(edit)
-loop = urwid.MainLoop(fill, unhandled_input=exit_on_q)
+loop = urwid.MainLoop(fill, palette, unhandled_input=exit_on_q)
+loop.screen.set_terminal_properties(colors=256)
+loop.widget = urwid.AttrMap(fill, 'bg')
 loop.run()
 
 f = open('tags.txt', 'w')
