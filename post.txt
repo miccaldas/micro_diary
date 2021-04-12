@@ -1,1 +1,1 @@
-Getting there with this app. Still trying to solve the navigation problem.
+Just tried Heroku. Is there a reason people use that prescriptive hellhole other than sloth?
