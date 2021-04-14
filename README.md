@@ -1,4 +1,4 @@
-I am in dire need to have a very serious talk with myself. I've been
+I'm in dire need to have a very serious talk with myself. I've been
 avoiding it for quite some time, but it's unavoidable.
 So, in order to break the ice with myself, I thought that creating a
 diary could be a good first step. Off course we are talking mostly of
