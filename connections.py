@@ -1,7 +1,9 @@
+"""Missing a comment here"""
 from mysql.connector import connect, Error
 
 
 def connections():
+    """E outro aqui"""
     f = open('post.txt', 'r')
     f_tags = open('tags.txt', 'r')
 

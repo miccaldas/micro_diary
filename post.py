@@ -1,3 +1,4 @@
+"""No comments on a subject that was new"""
 import urwid
 
 
@@ -20,7 +21,7 @@ palette = [
     ('bg', 'white', '#ff6f69'),
 ]
 
-edit = urwid.Edit(('banner', u"🡺\n\n"), align='center')
+edit = urwid.Edit(('banner', u"   DEITA CÀ PRA FORA!  \n"), align='center')
 fill = QuestionBox(edit)
 loop = urwid.MainLoop(fill, palette, unhandled_input=exit_on_q)
 loop.screen.set_terminal_properties(colors=256)
