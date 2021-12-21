@@ -7,9 +7,18 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
+
+# Database files.
+*.sql
+*.db
+
+# Log folders and files.
+*.log
+logs/
 
 # Distribution / packaging
 .Python
@@ -23,6 +32,7 @@ lib/
 lib64/
 parts/
 sdist/
+/dist/
 var/
 wheels/
 share/python-wheels/
